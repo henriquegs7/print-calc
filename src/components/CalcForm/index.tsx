@@ -105,9 +105,8 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
         <Label htmlFor="valorRolo">Valor do Rolo (R$)</Label>
         <Input
           id="valorRolo"
-          type="number"
+          type="text"
           inputMode="decimal"
-          pattern="[0-9]*"
           placeholder="R$120.00"
           value={valorRolo}
           onChange={(e) => setValorRolo(e.target.value)}
