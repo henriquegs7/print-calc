@@ -36,13 +36,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.25rem 0;
+    padding: 0.5rem 0;
     border-bottom: 1px solid var(--border-color);
     
     .history-item-content {
       flex: 1;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+    }
+
+    .project-name {
+      font-weight: 500;
+    }
+
+    .project-details {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+    .project-weight{
+      width: 50px;
+    }
+
+    .project-weight, .project-date {
+      display: inline-block;
     }
 
     .project-value {

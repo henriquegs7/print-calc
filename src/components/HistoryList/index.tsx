@@ -24,7 +24,13 @@ export const HistoryList = ({ items, onDeleteItem, onClearAll }: HistoryListProp
         {items.map((item, index) => (
           <div key={index} className="history-item">
             <div className="history-item-content">
-              <span className="project-name">{item.projeto}</span>
+              <div className="project-info">
+                <span className="project-name">{item.projeto}</span>
+                <div className="project-details">
+                  <span className="project-weight">{item.peso}g</span>
+                  <span className="project-date">{item.data}</span>
+                </div>
+              </div>
               <span className="project-value">R$ {item.valor.toFixed(2)}</span>
             </div>
             <button className="delete-item-button" onClick={() => onDeleteItem(index)} title="Remover este item">

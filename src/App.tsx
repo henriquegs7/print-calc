@@ -51,6 +51,7 @@ function App() {
           projeto: nomeProjeto,
           valor: custoFinal,
           data: new Date().toLocaleDateString(),
+          peso: pesoProjeto,
         },
         ...historico,
       ]
