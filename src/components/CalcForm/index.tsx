@@ -119,9 +119,8 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
           <Label htmlFor="pesoRolo">Peso do Rolo (g)</Label>
           <Input
             id="pesoRolo"
-            type="number"
+            type="text"
             inputMode="decimal"
-            pattern="[0-9]*"
             placeholder="1000g"
             value={pesoRolo}
             onChange={(e) => setPesoRolo(e.target.value)}
@@ -133,9 +132,8 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
           <Label htmlFor="pesoProjeto">Peso do Projeto (g)</Label>
           <Input
             id="pesoProjeto"
-            type="number"
+            type="text"
             inputMode="decimal"
-            pattern="[0-9]*"
             placeholder="50g"
             value={pesoProjeto}
             onChange={(e) => setPesoProjeto(e.target.value)}
