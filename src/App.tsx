@@ -9,8 +9,12 @@ import './App.scss'
 // Chave para armazenar no localStorage
 const STORAGE_KEY = "calculadora3d_historico"
 
+// Margem de lucro (50%)
+const MARGEM_LUCRO = 1.5
+
 function App() {
   const [resultado, setResultado] = useState<number | null>(null)
+  const [valorVenda, setValorVenda] = useState<number | null>(null)
   const [historico, setHistorico] = useState<HistoryItem[]>([])
   const [ultimosProjetos, setUltimosProjetos] = useState<string[]>([])
 
@@ -42,7 +46,11 @@ function App() {
   const handleCalculate = (valorRolo: number, pesoRolo: number, pesoProjeto: number, nomeProjeto: string) => {
     // Cálculo: (Valor do Rolo / Peso do Rolo) * Peso do Projeto
     const custoFinal = (valorRolo / pesoRolo) * pesoProjeto
+    // Cálculo do valor de venda (custo + 50%)
+    const precoVenda = custoFinal * MARGEM_LUCRO
+
     setResultado(custoFinal)
+    setValorVenda(precoVenda)
 
     // Adicionar ao histórico
     if (nomeProjeto.trim() !== "") {
@@ -50,6 +58,7 @@ function App() {
         {
           projeto: nomeProjeto,
           valor: custoFinal,
+          valorVenda: precoVenda,
           data: new Date().toLocaleDateString(),
           peso: pesoProjeto,
         },
@@ -66,6 +75,7 @@ function App() {
 
   const handleClear = () => {
     setResultado(null)
+    setValorVenda(null)
   }
 
   const handleDeleteHistoryItem = (index: number) => {
@@ -95,7 +105,7 @@ function App() {
         <div className="card-content">
           <CalculatorForm onCalculate={handleCalculate} onClear={handleClear} sugestoesProjetos={ultimosProjetos} />
 
-          {resultado !== null && <CalculationResult valor={resultado} />}
+          {resultado !== null && valorVenda !== null && <CalculationResult custo={resultado} valorVenda={valorVenda} />}
         </div>
 
         {historico.length > 0 && (

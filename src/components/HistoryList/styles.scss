@@ -36,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid var(--border-color);
     
     .history-item-content {
@@ -62,16 +62,25 @@
       font-size: 0.75rem;
       color: var(--text-light);
     }
-    .project-weight{
-      width: 50px;
-    }
 
     .project-weight, .project-date {
       display: inline-block;
     }
-
-    .project-value {
+    
+    .project-values {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.125rem;
+      font-size: 0.875rem;
+    }
+    
+    .cost-value {
       font-weight: 500;
+    }
+    
+    .sale-value {
+      color: #047857; // Verde mais escuro para o valor de venda
     }
     
     .delete-item-button {
@@ -81,6 +90,7 @@
       font-size: 1.25rem;
       line-height: 1;
       padding: 0 0.25rem;
+      margin-left: 0.5rem;
       cursor: pointer;
       opacity: 0.5;
       
