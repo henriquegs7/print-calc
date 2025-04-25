@@ -106,7 +106,7 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
         <Input
           id="valorRolo"
           type="number"
-          inputMode="numeric"
+          inputMode="decimal"
           pattern="[0-9]*"
           placeholder="R$120.00"
           value={valorRolo}
@@ -121,7 +121,7 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
           <Input
             id="pesoRolo"
             type="number"
-            inputMode="numeric"
+            inputMode="decimal"
             pattern="[0-9]*"
             placeholder="1000g"
             value={pesoRolo}
@@ -135,7 +135,7 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
           <Input
             id="pesoProjeto"
             type="number"
-            inputMode="numeric"
+            inputMode="decimal"
             pattern="[0-9]*"
             placeholder="50g"
             value={pesoProjeto}
