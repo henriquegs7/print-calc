@@ -3,16 +3,26 @@
   flex-direction: column;
   gap: 1rem;
 
+  .group-gramar {
+    display: flex;
+    gap: 0.5rem;
+  }
+
   .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 
+  .line {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1rem 0;
+  }
+
   .form-actions {
     display: flex;
     gap: 0.5rem;
-    margin-top: 0.5rem;
 
     button {
       flex: 1;
@@ -44,6 +54,37 @@
           background-color: var(--secondary-color);
         }
       }
+    }
+  }
+
+  .input-with-prefix,
+  .input-with-suffix {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .input-prefix,
+    .input-suffix {
+      position: absolute;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      pointer-events: none;
+    }
+
+    .input-prefix {
+      left: 0.75rem;
+    }
+
+    .input-suffix {
+      right: 0.75rem;
+    }
+
+    .with-prefix {
+      padding-left: 2rem;
+    }
+
+    .with-suffix {
+      padding-right: 2rem;
     }
   }
 }

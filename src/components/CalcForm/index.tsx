@@ -83,7 +83,7 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
         <div className="input-with-suggestions">
           <Input
             id="nomeProjeto"
-            placeholder="Ex: Miniatura Dragon"
+            placeholder="Miniatura Dragon"
             value={nomeProjeto}
             onChange={(e) => setNomeProjeto(e.target.value)}
             onFocus={() => setMostrarSugestoes(true)}
@@ -106,36 +106,40 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
         <Input
           id="valorRolo"
           type="number"
-          placeholder="Ex: 120.00"
+          placeholder="R$120.00"
           value={valorRolo}
           onChange={(e) => setValorRolo(e.target.value)}
           required
         />
       </div>
 
-      <div className="form-group">
-        <Label htmlFor="pesoRolo">Peso do Rolo (g)</Label>
-        <Input
-          id="pesoRolo"
-          type="number"
-          placeholder="Ex: 1000"
-          value={pesoRolo}
-          onChange={(e) => setPesoRolo(e.target.value)}
-          required
-        />
+      <div className="group-gramar">
+        <div className="form-group">
+          <Label htmlFor="pesoRolo">Peso do Rolo (g)</Label>
+          <Input
+            id="pesoRolo"
+            type="number"
+            placeholder="1000g"
+            value={pesoRolo}
+            onChange={(e) => setPesoRolo(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <Label htmlFor="pesoProjeto">Peso do Projeto (g)</Label>
+          <Input
+            id="pesoProjeto"
+            type="number"
+            placeholder="50g"
+            value={pesoProjeto}
+            onChange={(e) => setPesoProjeto(e.target.value)}
+            required
+          />
+        </div>
       </div>
 
-      <div className="form-group">
-        <Label htmlFor="pesoProjeto">Peso do Projeto (g)</Label>
-        <Input
-          id="pesoProjeto"
-          type="number"
-          placeholder="Ex: 50"
-          value={pesoProjeto}
-          onChange={(e) => setPesoProjeto(e.target.value)}
-          required
-        />
-      </div>
+      <div className="line"></div>
 
       <div className="form-actions">
         <Button type="submit">Calcular</Button>
