@@ -107,7 +107,6 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
           id="valorRolo"
           type="number"
           inputMode="decimal"
-          pattern="[0-9]*"
           placeholder="R$120.00"
           value={valorRolo}
           onChange={(e) => setValorRolo(e.target.value)}
@@ -122,7 +121,6 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
             id="pesoRolo"
             type="number"
             inputMode="decimal"
-            pattern="[0-9]*"
             placeholder="1000g"
             value={pesoRolo}
             onChange={(e) => setPesoRolo(e.target.value)}
@@ -136,7 +134,6 @@ export const CalculatorForm = ({ onCalculate, onClear, sugestoesProjetos = [] }:
             id="pesoProjeto"
             type="number"
             inputMode="decimal"
-            pattern="[0-9]*"
             placeholder="50g"
             value={pesoProjeto}
             onChange={(e) => setPesoProjeto(e.target.value)}
