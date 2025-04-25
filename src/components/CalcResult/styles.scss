@@ -1,0 +1,17 @@
+.calculation-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--success-light);
+  border: 1px solid var(--success-color);
+  border-radius: var(--radius);
+  text-align: center;
+
+  p {
+    font-weight: 500;
+  }
+
+  .result-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}
